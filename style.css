@@ -1,0 +1,210 @@
+/* --- Basic Setup & Fonts --- */
+:root {
+    --primary-color: #007aff;
+    --background-color: #1a1a2e; /* Dark background */
+    --card-background: #2a2a3e;  /* Slightly lighter card */
+    --text-color: #f0f0f0;       /* Light text */
+    --text-muted: #a0a0b0;    /* Muted text for descriptions */
+    --border-color: #4a4a6a;    /* Subtle border */
+    --success-color: #28a745;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Keyframes for the animated gradient background */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: var(--font-family);
+    /* This creates the animated gradient background */
+    background: linear-gradient(-45deg, #1a1a2e, #2a2a3e, #1a1a2e, #3a3a5e);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; /* Changed to allow footer at bottom */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Main Container --- */
+.converter-container {
+    width: 100%;
+    max-width: 800px;
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    padding: 2.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-color);
+}
+
+header p {
+    margin: 0 0 2.5rem 0;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* --- Upload Area --- */
+#upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 3rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+#upload-area.drag-over {
+    border-color: var(--primary-color);
+    background-color: rgba(0, 122, 255, 0.1);
+    transform: scale(1.02);
+}
+
+#upload-area p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+#upload-area p strong {
+    color: var(--text-color);
+}
+
+.upload-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* --- Options & Results --- */
+#options, #results {
+    display: none; /* Hidden by default */
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.quality-slider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.quality-slider label {
+    font-weight: 500;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    flex-grow: 1;
+    height: 8px;
+    background: #4a4a6a;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* --- Image Comparison --- */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.image-card {
+    border: 1px solid var(--border-color);
+    background: var(--background-color);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.image-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background: rgba(0,0,0,0.2);
+}
+
+.file-info {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.size-reduction {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+/* --- Download Button --- */
+#download-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+#download-btn:hover {
+    background-color: #005bb5;
+}
+
+/* --- Helper Classes --- */
+.hidden {
+    display: none !important;
+}
+
+/* --- Footer --- */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0 1rem 0; /* Add some space */
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
