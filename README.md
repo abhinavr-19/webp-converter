@@ -4,7 +4,6 @@ A sleek, client-side web application for converting JPG, PNG, and JPEG images to
 
 ### ✨ [Live Demo Link](https://your-username.github.io/webp-converter/)
 
-*(Replace the link above with your actual GitHub Pages URL)*
 
 ---
 
@@ -60,4 +59,4 @@ To run this project on your local machine:
 
 * **Abhinav R**
     * Portfolio: [your-portfolio-website.com](https://your-portfolio-website.com)
-    * GitHub: [@your-username](https://github.com/abhinavr-19)
+    * GitHub: [@abhinavr-19](https://github.com/abhinavr-19)
