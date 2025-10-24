@@ -9,9 +9,9 @@ A sleek, client-side web application for converting JPG, PNG, and JPEG images to
 
 ### Screenshot
 
-![WebP Converter Screenshot](path/to/your/screenshot.png)
+![WebP Converter Screenshot](https://github.com/user-attachments/assets/271c340e-e0bc-4136-986a-83e0e5e6f1e7)
 
-*(Add a screenshot of your application here to give visitors a quick look at your work.)*
+*Screenshot of Webp converter website*
 
 ---
 
